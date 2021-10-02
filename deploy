@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+deployed_to=~/whm/AppData/Local/caster/rules
+
+[[ -n $@ ]] && rule_file_pattern="$@" || rule_file_pattern="*.py"
+
+cp $rule_file_pattern $deployed_to
+echo "deployed to ${deployed_to}:"
+ls -ltr $deployed_to | grep -v ".pyc$"
