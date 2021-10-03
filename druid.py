@@ -3,7 +3,7 @@ from dragonfly import Mimic, Function, MappingRule
 from castervoice.lib.actions import Key, Text
 
 from castervoice.lib.ctrl.mgr.rule_details import RuleDetails
-from castervoice.lib.merge.additions import IntegerRefST
+from castervoice.lib.merge.additions import ShortIntegerRef
 from castervoice.lib.merge.state.short import R
 
 # Added
@@ -76,7 +76,7 @@ class DruidRule(MappingRule):
         "(bait)": Text("/cast Fishing") + R(Key('enter')),
     }
     extras = [
-        IntegerRefST("n", 1, 10000),
+        ShortIntegerRef("n", 1, 10000),
     ]
     defaults = {"n": 0}
 
