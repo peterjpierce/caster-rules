@@ -1,0 +1,7 @@
+noodle/
+*env/
+var/
+*.swp
+*.bak
+*.py[cod]
+.vscode
